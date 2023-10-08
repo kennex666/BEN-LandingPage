@@ -12,9 +12,11 @@
     margin-right: 1.5rem;
 }
 
+
+
 section{
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 .btn-no-outline,
@@ -58,10 +60,19 @@ section{
 .font-sl1-heading * {
     margin: 0;
     padding: 0;
-    font-size: 5.7rem;
+    font-size: 5.6vw;
     color: #fff;
     font-weight: 700;
-    line-height: 7rem;
+    line-height: 7vw;  
+}
+
+.font-sl1-heading-mobile * {
+    margin: 0;
+    padding: 0;
+    font-size: 12vw;
+    color: #fff;
+    font-weight: 700;
+    line-height: 15vw;
 }
 
 .transparent-text-heading-sl1 {
@@ -84,6 +95,7 @@ section{
     width: 8rem;
     padding: 0.8rem 0.5rem;
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
     border: 0;
     border-radius: 40px;
 }
@@ -225,7 +237,7 @@ section{
 /* Style the container */
 .image-container {
     position: relative;
-    display: inline-block;
+    display: block;
 }
 
 /* Style the SVG for the border */
@@ -233,8 +245,6 @@ section{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     pointer-events: none;
     /* This prevents the SVG from interfering with user interactions */
 }
