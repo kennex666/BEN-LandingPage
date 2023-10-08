@@ -1,0 +1,25 @@
+@media screen and (max-width: 873px) {
+
+    section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+
+    .btn-pink-download {
+        margin-bottom: 1rem;
+        padding: 1rem 1.5rem;
+        border: 0;
+        border-radius: 50px;
+        font-size: 1rem;
+        background-color: #DD3F98;
+        color: #FFF;
+        font-weight: 600;   
+        margin-right: 1.5rem;
+    }
+
+
+
+
+
+}

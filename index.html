@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -21,20 +22,21 @@
             <!-- Left brand -->
             <div class="null"></div>
             <!-- Right brand -->
-            <div class="navbar pd6x12-nav-item d-none d-md-flex">
+
+            <!-- For desktop -->
+            <div class="navbar pd6x12-nav-item d-none d-lg-flex">
                 <a href="#" class="nav-item nav-link nav-item-1">Trang chủ</a>
                 <a href="#" class="nav-item nav-link nav-item-1">Khám phá</a>
                 <a href="#" class="nav-item nav-link nav-item-1">Tin tức</a>
                 <a href="#" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
                 <input type="text" class="txt-search" placeholder="Tìm kiếm..."></input>
+            </div>
 
-
-            <!-- Button collapse -->
-            <div class="d-md-none">
-                <button class="btn btn-no-outline custom-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <!-- For tablet -->
+            <div class="navbar pd6x12-nav-item d-none d-md-flex d-lg-none">
+                <a href="#" class="nav-item nav-link nav-item-1">Trang chủ</a>
+                <a href="#" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
+                <input type="text" class="txt-search" placeholder="Tìm kiếm..."></input>
             </div>
             <!-- Navbar collapse -->
         
@@ -54,16 +56,53 @@
             <a href="#" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
         </nav>
 
-        <section name="landing-fullscreen" id="section1" class="fullscreen-first-page">
-            <img class="logo-custom-position mt-5" src="assets/img/logo-ben.svg" alt="">
-            <div class="row">
-                <div class="col-5 p5 font-sl1-heading d-flex flex-column justify-content-center">
+        <section name="landing-fullscreen" id="section1" class="fullscreen-first-page pt-5">
+            <img class="logo-custom-position d-none d-md-flex" src="assets/img/logo-ben.svg" alt="">
+
+            <!-- Make for mobile -->
+            <div class="row d-xs-flex d-md-none">
+                <div class="row d-flex flex-row justify-content-between">
+                    <div class="col-xs-6">
+                        <img class="" src="assets/img/logo-ben.svg" alt="">
+                    </div>
+                    <div class="col-xs-6 font-sl1-heading-mobile d-flex flex-column justify-content-center">
+                        <p class="">Được.Ăn cả.</p>
+                        <i class="">Ngã,</i>
+                        <p class="">Về <span class="transparent-text-heading-sl1">Không.</span></p>
+                    </div>
+                </div>
+
+                <div class="d-sm-block d-md-none pt-4"></div>
+
+                <div class="col-xm-12">
+                    <div class="image-container">
+                        <svg class="border-svg" width="100%" height="100%" viewBox="0 0 723 468" fill="none"
+                            preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_424_794)">
+                                <rect x="6" y="2" width="711" height="456" rx="14" stroke="#DDDDDD" stroke-width="4"
+                                    stroke-dasharray="12 12" shape-rendering="crispEdges" />
+                            </g>
+                            <defs>
+
+                            </defs>
+                        </svg>
+                        <img class="img-banner" width="100%" src="assets/img/ben_banner.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Make for desktop -->
+            <div class="row d-none d-md-flex">
+                <div class="col-sm-12 col-md-5 p5 font-sl1-heading d-flex flex-column justify-content-center">
                     <p class="">Được.Ăn cả.</p>
                     <i class="">Ngã,</i>
                     <p class="">Về <span class="transparent-text-heading-sl1">Không.</span></p>
                 </div>
-                <div class="col-7">
-                    <div class="image-container" width="100%">
+
+                <div class="d-sm-block d-md-none pt-4"></div>
+
+                <div class="col-sm-12 col-md-7">
+                    <div class="image-container">
                         <svg class="border-svg" width="100%" height="100%" viewBox="0 0 723 468" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_424_794)">
                                 <rect x="6" y="2" width="711" height="456" rx="14" stroke="#DDDDDD" stroke-width="4" stroke-dasharray="12 12"
@@ -73,13 +112,12 @@
                                 
                             </defs>
                         </svg>
-                        <img class="img-banner" src="assets/img/ben_banner.png" alt="" srcset="">
-
+                        <img class="img-banner" width="100%" src="assets/img/ben_banner.png" alt="" srcset="">
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 pt-3">
+                <div class="col-12 pt-2">
                     <button class="btn btn-pink-download">Tải ứng dụng ngay</button>
                      <button class="btn btn-pink-download">Xem thông tin về quyền riêng tư</button>
                 </div>
