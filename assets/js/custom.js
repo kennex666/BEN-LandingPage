@@ -18,17 +18,25 @@ const removeClassX = (elementID, className) => {
 
 window.addEventListener('scroll', (e) => {
     if (window.scrollY <= 50) {
-        addClassX(menuBar, "navbar-text-white");
-        addClassX(toggleIcon, "custom-toggler");
-        removeClassX(menuBar, "bg-light");
+        removeClassX(menuBar, "bg-light-custom");
+        removeClassX(txtSearch[0], "txt-search-dark")
+        addClassX(txtSearch[0], "txt-search")
+        removeClassX(txtSearch[1], "txt-search-dark")
+        addClassX(txtSearch[1], "txt-search")
+        logoNav.src = "";
     } else if (window.scrollY > 100) {
-        removeClassX(menuBar, "navbar-text-white");
-        removeClassX(toggleIcon, "custom-toggler");
-        addClassX(menuBar, "bg-light awake");
+        addClassX(menuBar, "bg-light-custom awake");
+        removeClassX(txtSearch[0], "txt-search")
+        removeClassX(txtSearch[1], "txt-search")
+        addClassX(txtSearch[0], "txt-search-dark")
+        addClassX(txtSearch[1], "txt-search-dark")
+        logoNav.src = "assets/img/logo-ben.svg";
     }
 })
 
 window.onload = () => {
     menuBar = $.getElementById("menuBar");
     toggleIcon = $.getElementById("toggle-icon-white")
+    logoNav = $.getElementById("logo-nav");
+    txtSearch = $.getElementsByName("txtSearch");
 }

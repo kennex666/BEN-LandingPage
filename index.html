@@ -9,7 +9,7 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src=""></script>
+    <script src="assets//js/custom.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
     </style>
@@ -18,32 +18,32 @@
 <body>
     <div class="container-custom">
         <!-- Nav bar -->
-        <nav id="menuBar" class="navbar navbar-fixed pt-2 ps-5 pe-5 align-items-start">
+        <nav id="menuBar" class="navbar navbar-fixed pt-2 ps-5 pe-5 align-items-center">
             <!-- Left brand -->
-            <div class="null"></div>
+            <img id="logo-nav" class="nav-item nav-logo" height="" src="" />
             <!-- Right brand -->
 
             <!-- For desktop -->
             <div class="navbar pd6x12-nav-item d-none d-lg-flex">
                 <a href="#" class="nav-item nav-link nav-item-1">Trang chủ</a>
-                <a href="#" class="nav-item nav-link nav-item-1">Khám phá</a>
-                <a href="#" class="nav-item nav-link nav-item-1">Tin tức</a>
-                <a href="#" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
-                <input type="text" class="txt-search" placeholder="Tìm kiếm..."></input>
+                <a href="#discover" class="nav-item nav-link nav-item-1">Khám phá</a>
+                <a href="#policy" class="nav-item nav-link nav-item-1">Tin tức</a>
+                <a href="#introduce" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
+                <input name="txtSearch" type="text" class="txt-search" placeholder="Tìm kiếm..."></input>
             </div>
 
             <!-- For tablet -->
             <div class="navbar pd6x12-nav-item d-none d-md-flex d-lg-none">
                 <a href="#" class="nav-item nav-link nav-item-1">Trang chủ</a>
-                <a href="#" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
-                <input type="text" class="txt-search" placeholder="Tìm kiếm..."></input>
+                <a href="#introduce" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
+                <input name="txtSearch" type="text" class="txt-search" placeholder="Tìm kiếm..."></input>
             </div>
             <!-- Navbar collapse -->
         
         </nav>
         
         <!-- Nav for mobile -->
-        <nav class="collapse navbar-collapse menu-full-screeen  ps-3 pt-3 pe-3" id="collapsibleNavbar">
+        <nav class="collapse navbar-collapse menu-full-screeen ps-3 pt-3 pe-3" id="collapsibleNavbar">
             <div class="w-100 d-flex justify-content-between">
                 <a href="#" class="navbar-brand nav-item-1">Trang chủ</a>
                 <button class="btn btn-close btn" type="button" data-bs-toggle="collapse"
@@ -55,6 +55,7 @@
             <a href="#" class="nav-item nav-link nav-item-1">Tin tức</a>
             <a href="#" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
         </nav>
+
 
         <section name="landing-fullscreen" id="section1" class="fullscreen-first-page pt-5">
             <img class="logo-custom-position d-none d-md-flex" src="assets/img/logo-ben.svg" alt="">
@@ -75,8 +76,8 @@
                 <div class="d-sm-block d-md-none pt-4"></div>
 
                 <div class="col-xm-12">
-                    <div class="image-container">
-                        <svg class="border-svg" width="100%" height="100%" viewBox="0 0 723 468" fill="none"
+                    <div class="img-with-border">
+                        <svg class="border-svg" viewBox="0 0 723 468" fill="none"
                             preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_424_794)">
                                 <rect x="6" y="2" width="711" height="456" rx="14" stroke="#DDDDDD" stroke-width="4"
@@ -86,7 +87,7 @@
 
                             </defs>
                         </svg>
-                        <img class="img-banner" width="100%" src="assets/img/ben_banner.png" alt="" srcset="">
+                        <img class="img-banner" src="assets/img/ben_banner.png" alt="" srcset="">
                     </div>
                 </div>
             </div>
@@ -103,16 +104,18 @@
 
                 <div class="col-sm-12 col-md-7">
                     <div class="image-container">
-                        <svg class="border-svg" width="100%" height="100%" viewBox="0 0 723 468" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                            <g filter="url(#filter0_d_424_794)">
-                                <rect x="6" y="2" width="711" height="456" rx="14" stroke="#DDDDDD" stroke-width="4" stroke-dasharray="12 12"
-                                    shape-rendering="crispEdges" />
-                            </g>
-                            <defs>
-                                
-                            </defs>
-                        </svg>
-                        <img class="img-banner" width="100%" src="assets/img/ben_banner.png" alt="" srcset="">
+                        <div class="img-with-border">
+                            <svg class="border-svg" viewBox="0 0 723 468" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_424_794)">
+                                    <rect x="6" y="2" width="711" height="456" rx="14" stroke="#DDDDDD" stroke-width="4" stroke-dasharray="12 12"
+                                        shape-rendering="crispEdges" />
+                                </g>
+                                <defs>
+                            
+                                </defs>
+                            </svg>
+                            <img class="img-banner" src="assets/img/ben_banner.png" alt="" srcset="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,50 +129,66 @@
 
         <!-- End full screen -->
 
-        <section name="end-landing-full-screen" class="end-fullscreen-first-page" >
-            
-        </section>
-
+        <!-- Intro sec -->
         <section id="introduce" name="introduce" class="content-tab pt-5">
-            <div class=" mb-5 d-flex flex-column justify-content-center align-items-center w-100 text-center">
-                <h5 class="font-color-gold">NHÀ PHÁT TRIỂN</h5>
-                <h2 class="font-color-gold">BẤT ĐỘNG SẢN HÀNG HIỆU</h2>
-                <h5 class="font-color-gold">LỚN NHẤT VIỆT NAM</h5>
-                <p class="font-size-smaller pt-3 w-50 line-space-2 d-none d-md-block ">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore earum delectus est ullam omnis, maiores
-                    debitis
-                    sequi vero minima minus fuga labore dicta, eos, ducimus dolores quod sapiente quasi dignissimos? Cupiditate
-                    tempore,
-                    quae fuga exercitationem vel debitis sequi perferendis unde ratione voluptate natus blanditiis mollitia.
-                    Adipisci
-                    eius consequatur illum ab dignissimos quia non delectus accusantium autem recusandae ducimus soluta ex
-                    repellat
-                    repellendus est eos, dicta animi debitis quae molestiae ad iusto. Hic itaque, reiciendis explicabo commodi,
-                    vero
-                    sapiente veniam quam assumenda unde laboriosam aliquam animi. Mollitia nam tempore impedit nesciunt esse
-                    sed, earum
-                    fugit, saepe, nisi excepturi enim maiores debitis?
-                </p>
-                <p class="font-size-smaller pt-3 w-75 line-space-2 d-md-none ">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore earum delectus est ullam omnis, maiores
-                    debitis
-                    sequi vero minima minus fuga labore dicta, eos, ducimus dolores quod sapiente quasi dignissimos? Cupiditate
-                    tempore,
-                    quae fuga exercitationem vel debitis sequi perferendis unde ratione voluptate natus blanditiis mollitia.
-                    Adipisci
-                    eius consequatur illum ab dignissimos quia non delectus accusantium autem recusandae ducimus soluta ex
-                    repellat
-                    repellendus est eos, dicta animi debitis quae molestiae ad iusto. Hic itaque, reiciendis explicabo commodi,
-                    vero
-                    sapiente veniam quam assumenda unde laboriosam aliquam animi. Mollitia nam tempore impedit nesciunt esse
-                    sed, earum
-                    fugit, saepe, nisi excepturi enim maiores debitis?
-                </p>
+            <div class="mb-5 intro-section">
+                <h1 class="font-ben-pink text-center"><span class="font-transparent-pink">b</span>en.</h1>
+                <div class="font-ben-intro pt-5 line-space-2 text-center">
+                    <span class="font-color-FC3E90">BEN /ben/</span> được sinh ra là một ứng dụng trên điện thoại, luôn phải có mặt trong
+                    <br>mọi cuộc vui của bạn. Tại đây, bạn có thể chơi các trò chơi để quyết định xem,
+                    <br><b><i>ai là người uống kế tiếp?</i></b> hoặc <b><i>hơn thế nữa.</i></b>
+                    <br>Ứng dụng gắn kết tình đồng chí và hứa sẽ không “quắc cần câu” khi trở về.
+                </div>
+                <div class="font-ben-intro pt-2 line-space-2 text-end">
+                    <b>Nhớ uống có trách nhiệm nhé!</b>
+                    <br><b>BEN Team,</b>
+                    <br><b>Trân trọng.</b>
+                </div>
             </div>
             <div class="ctt__container-bg">
-                <img class="" src="res/img/background1.jpeg" alt="">
+                <img class="" src="assets/img/background-1.png" alt="">
             </div>
         </section>
+
+
+        <section id="discover" name="discover" class="pt-3">
+            <div class="pb-3">
+                <h1 class="">Khám Phá Ngay. Trò Chơi Đang Khả Dụng.</h1>
+            </div>
+            
+            <div class="card-custom card-brown d-flex flex-row justify-content-end align-items-center text-end text-white">
+                <div>
+                    <h1 class="custom-text-banner">Tic Tac Toe<span class="font-color-55D04A">,</span>
+                        <br>Đội Lốt Ca-Rô<span class="font-color-F24E1E">.</span>
+                        <br>Nhất Thắng,
+                        <br>Nhì Thua.
+                    </h1>
+                    <p class="font-size-smaller">Khi bạn chợt nhận ra, thắng thua không còn quan trọng nữa. Vì trò
+                        <br>chơi này đơn giản đến mức đứa trẻ lớp một còn biết.
+                        <br>Tuy nhiên, hên xui may rủi.
+                        <br>Cá chắc luôn? Thua thì phải uống cho hết nhé~
+                    </p>
+                </div>
+                <img class="card-custom-img card-custom-img-left" src="assets/img/tic-tac-toe_banner.png" alt="" srcset="">
+            </div>
+
+            <div class="card-custom card-blue d-flex flex-row justify-content-start align-items-center text-start text-white mt-4">
+                <div>
+                    <h1 class="custom-text-banner">Lật Thẻ<span class="font-color-55D04A">,</span>
+                        <br>May Rủi Hơn
+                        <br>Cái Trên<span class="font-color-F24E1E">.</span>
+                        <br>Cũng OK.
+                    </h1>
+                    <p class="font-size-smaller">May rủi theo đúng nghĩa đen. Dành cho hệ người chơi yêu thích
+                    <br> sự mạo hiểm. Không thích hơn thua.
+                    <br>Flip Card còn bất ngờ hơn bạn nghĩ nhiều!
+                    </p>
+                </div>
+                <img class="card-custom-img card-custom-img-right" src="assets/img/flip-cardbanner.png" alt="" srcset="">
+            </div>
+
+        </section>
+
 
     </div>
 </body>
