@@ -27,7 +27,7 @@
             <div class="navbar pd6x12-nav-item d-none d-lg-flex">
                 <a href="#" class="nav-item nav-link nav-item-1">Trang chủ</a>
                 <a href="#discover" class="nav-item nav-link nav-item-1">Khám phá</a>
-                <a href="#policy" class="nav-item nav-link nav-item-1">Tin tức</a>
+                <a href="#privacy-policy" class="nav-item nav-link nav-item-1">Tin tức</a>
                 <a href="#introduce" class="nav-item nav-link nav-item-1">Về chúng tôi</a>
                 <input name="txtSearch" type="text" class="txt-search" placeholder="Tìm kiếm..."></input>
             </div>
@@ -130,7 +130,7 @@
         <!-- End full screen -->
 
         <!-- Intro sec -->
-        <section id="introduce" name="introduce" class="content-tab pt-5">
+        <section id="introduce" name="introduce" class="content-tab__intro pt-5">
             <div class="mb-5 intro-section">
                 <h1 class="font-ben-pink text-center"><span class="font-transparent-pink">b</span>en.</h1>
                 <div class="font-ben-intro pt-5 line-space-2 text-center">
@@ -150,10 +150,11 @@
             </div>
         </section>
 
+        <section id="discover" name="discover" class="pt-3 d-flex justify-content-center align-items-center flex-column">
+            <p class="d-xs-block d-md-none pb-5 text-danger"> Hiện chưa tối ưu phần này cho điện thoại, có thể sẽ bị lỗi 1 số phần </p>
 
-        <section id="discover" name="discover" class="pt-3">
-            <div class="pb-3">
-                <h1 class="">Khám Phá Ngay. Trò Chơi Đang Khả Dụng.</h1>
+            <div class="pb-3 align-self-start">
+                <h1 class="font-ben-heading">Khám Phá Ngay. Trò Chơi Đang Khả Dụng.</h1>
             </div>
             
             <div class="card-custom card-brown d-flex flex-row justify-content-end align-items-center text-end text-white">
@@ -186,10 +187,103 @@
                 </div>
                 <img class="card-custom-img card-custom-img-right" src="assets/img/flip-cardbanner.png" alt="" srcset="">
             </div>
+        </section>
 
+        <section id="privacy-policy" name="privacy-policy" class="pt-5">
+            <div class="pb-3">
+                <h1 class="font-ben-heading">Đôi Chút Về Quyền Riêng Tư Của Bạn.</h1>
+                <p class="ps-1">Hãy tham khảo chi tiết <a href="privacy-policy.html">tại đây</a> để có một cái nhìn tổng quan nhé!</p>
+            </div>
+        </section>
+
+        <section id="about-us" name="about-us" class="pt-2">
+            <div class="create-line-top pb-5"></div>
+            <div class="row">
+                <!-- desktop -->
+                <div class="col-6 contact-us-text d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-5"></div>
+                        <div class="col-md-10 col-lg-7">
+                            <h3 class="fst-italic">Liên lạc với chúng tôi,</h3>
+                            <h3>thông qua <b>email.</b></h3>
+                        </div>  
+                    </div> 
+                </div>
+                <!-- mobile -->
+                <div class="col-12 contact-us-text d-xs-block d-md-none">
+                    <h3 class="">Liên lạc với chúng tôi, thông qua <b>email.</b></h3>
+                </div>
+                
+                <form class="col-xs-12 col-md-6">
+                    <div>
+                        <label class="font-bold font-size-smaller" for="txt-email">Email</label>
+                        <input type="text" class="form-control font-size-smaller" id="txt-email" placeholder="Vui lòng nhập email">
+                    </div>
+
+                    <div class="font-bolder font-size-smaller mt-2">
+                        <div class="font-bold" for="radProblem">Vấn đề bạn gặp phải</div>
+                        <div name="radErrorCode1">
+                            <input type="radio" id="radErrorCode1" name="radProblem" value="1" checked>
+                            <label for="radErrorCode1">Lỗi khi sử dụng: Ví dụ như lỗi đăng nhập, giật lag,...</label>
+                        </div>
+                        <div name="radErrorCode2">
+                            <input type="radio" id="radErrorCode2" name="radProblem" value="2">
+                            <label for="radErrorCode2">Lỗi thanh toán</label>
+                        </div>
+                        <div name="radErrorCode3">
+                            <input type="radio" id="radErrorCode3" name="radProblem" value="3">
+                            <label for="radErrorCode3">Khác</label>
+                        </div>
+                    </div>
+
+                    <div class="mt-2">
+                        <button id="submitProblem" type="submit" class="btn btn-red-submit">Gửi</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="create-line-bottom pt-5"></div>
         </section>
 
 
     </div>
 </body>
+
+<footer>
+    <section name="footer" id="footer" class="mt-3 pb-4">
+        <div class="row">
+            <div class="col-xs-12 col-md-5 col-lg-7">
+                <div name="logo">
+                    <img class="ben-logo-footer" src="assets/img/logo-ben.svg" alt="" srcset="">
+                </div>
+                <div name="sologan" class="font-size-smaller pt-2 ps-1">
+                    <p>Ứng dụng "mời uống" một cách mới lạ.<br>Nhớ uống có trách nhiệm.</br></p>
+                    <p>©2023. Mọi quyền được bảo lưu.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-7 col-lg-5 font-size-smaller">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="link-footer"><b>Liên kết</b></label>
+                        <ul name="link-footer" class="link-footer">
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                            <li><a href="#">Chính sách liên kết</a></li>
+                            <li><a href="#">Chính sách thanh toán</a></li>
+                            <li><a href="#">Quy chế hoạt động</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <label for="link-footer"><b>Liên hệ với Ben.</b></label>
+                        <p name="link-footer" class="link-footer">
+                            <b>Email:</b> <a href="mailto:contact@ben.com">contact@ben.com</a>
+                            <br><b>Phone:</b> <a href="tel:+842899999999">(028) 99 99 9999</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
 </html>

@@ -72,11 +72,29 @@
     .fullscreen-first-page {
         height: auto;
     }
+    .font-ben-intro{
+        font-size: 20px
+    }
+
+    .content-tab__intro{
+        position: relative;
+        height: fit-content;
+    }
+
+    .content-tab__intro img {
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
 @media screen and (max-width: 1440px) {
-    
-    #discover{
+
+    #discover, #privacy-policy, #about-us{
+        padding: 0px 5vw;
+    }
+
+    #footer{
         padding: 0px 5vw;
     }
 
