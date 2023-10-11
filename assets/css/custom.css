@@ -405,6 +405,11 @@ section{
     border-radius: 12px;
 }
 
+.btn-red-submit:hover {
+    background-color: #c1363f;
+    color: #fff;
+}
+
 .create-line-top{
     border-top: 1px solid #DDDDDD;
 }
@@ -432,4 +437,17 @@ section{
     line-height: 120%;
     letter-spacing: -0.02em;
     color: #000000;
+}
+.btn-gray{
+    font-size: smaller;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #1c1c1c;
+    color: #FFF;
+    border-radius: 12px;
+}
+.btn-gray:hover{
+    background-color: #7a7878;
+    color: #FFF;
 }
