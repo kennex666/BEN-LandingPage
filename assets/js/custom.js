@@ -42,6 +42,50 @@ window.onload = () => {
     toggleIcon = $.getElementById("toggle-icon-white")
     logoNav = $.getElementById("logo-nav");
     txtSearch = $.getElementsByName("txtSearch");
+    listGames = [];
+
+
+    if (window.location.pathname.indexOf('/index') !== -1) {
+        listGameBtn = $.getElementsByName("gameButton");
+        listGameBanner = $.getElementsByName("gameBanner");
+        listGameInfo = $.getElementsByName("gameInfo");
+
+        listGames[0] = {
+            isShown: false,
+            btnObj: listGameBtn[0],
+            imgObj: listGameBanner[0],
+            infoObj: listGameInfo[0]
+        }
+
+        listGames[1] = {
+            isShown: false,
+            btnObj: listGameBtn[1],
+            imgObj: listGameBanner[1],
+            infoObj: listGameInfo[1]
+        }
+
+        listGames.forEach(element => {
+           element.btnObj.onclick = () => {
+            if (element.isShown) {
+                element.isShown = false
+                removeClassX(element.infoObj, "hidden");
+                addClassX(element.infoObj, "wake-hidden");
+                addClassX(element.imgObj, "hidden");
+                removeClassX(element.imgObj, "wake-hidden");
+
+            } else {
+                element.isShown = true;
+                addClassX(element.infoObj, "hidden");
+                addClassX(element.imgObj, "wake-hidden");
+                removeClassX(element.imgObj, "hidden");
+                removeClassX(element.infoObj, "wake-hidden");
+            }
+        }
+        });
+        
+
+        $.getElementById("btn-downloadApp").href = getMobileOperatingSystem();
+    }
 
     if (window.location.pathname.indexOf('/privacy-policy') !== -1) {
         btnLanguage = $.getElementById("btn-switch");
@@ -62,4 +106,18 @@ window.onload = () => {
             }
         }
     }
+}
+
+
+function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        alert("iOS detected - Download App for IOS");
+        return "iOS";
+    }
+        
+    alert("Android detected - Download App for IOS");
+    return "Android";
 }

@@ -121,7 +121,7 @@
             </div>
             <div class="row">
                 <div class="col-12 pt-2">
-                    <button class="btn btn-pink-download">Tải ứng dụng ngay</button>
+                    <a href="#" id="btn-downloadApp"><button class="btn btn-pink-download">Tải ứng dụng ngay</button></a>
                     <a href="privacy-policy.html"><button class="btn btn-pink-download">Xem thông tin về quyền riêng tư</button></a>
                 </div>
             </div>
@@ -130,7 +130,7 @@
         <!-- End full screen -->
 
         <!-- Intro sec -->
-        <section id="introduce" name="introduce" class="content-tab__intro pt-5">
+        <section id="introduce" name="introduce" class="content-tab__intro pt-5 ctt__container-bg pb-4">
             <div class="mb-5 intro-section">
                 <h1 class="font-ben-pink text-center"><span class="font-transparent-pink">b</span>en.</h1>
                 <div class="font-ben-intro pt-5 line-space-2 text-center">
@@ -145,20 +145,19 @@
                     <br><b>Trân trọng.</b>
                 </div>
             </div>
-            <div class="ctt__container-bg">
-                <img class="" src="assets/img/background-1.png" alt="">
-            </div>
         </section>
 
         <section id="discover" name="discover" class="pt-3 d-flex justify-content-center align-items-center flex-column">
-            <p class="d-xs-block d-md-none pb-5 text-danger"> Hiện chưa tối ưu phần này cho điện thoại, có thể sẽ bị lỗi 1 số phần </p>
-
             <div class="pb-3 align-self-start">
                 <h1 class="font-ben-heading">Khám Phá Ngay. Trò Chơi Đang Khả Dụng.</h1>
             </div>
             
-            <div class="card-custom card-brown d-flex flex-row justify-content-end align-items-center text-end text-white">
-                <div>
+            <!-- Make for tablet and desktop -->
+            <div class="card-custom card-brown flex-row justify-content-end align-items-center text-end text-white d-none d-md-flex">
+                <div class="card-custom-img card-custom-img-left">
+                    <img src="assets/img/tic-tac-toe_banner.png" alt="" srcset="">
+                </div>
+                <div class="w-50">
                     <h1 class="custom-text-banner">Tic Tac Toe<span class="font-color-55D04A">,</span>
                         <br>Đội Lốt Ca-Rô<span class="font-color-F24E1E">.</span>
                         <br>Nhất Thắng,
@@ -170,11 +169,13 @@
                         <br>Cá chắc luôn? Thua thì phải uống cho hết nhé~
                     </p>
                 </div>
-                <img class="card-custom-img card-custom-img-left" src="assets/img/tic-tac-toe_banner.png" alt="" srcset="">
             </div>
 
-            <div class="card-custom card-blue d-flex flex-row justify-content-start align-items-center text-start text-white mt-4">
-                <div>
+            <div class="card-custom card-blue flex-row justify-content-start align-items-center text-white d-none d-md-flex mt-4">
+                <div class="card-custom-img card-custom-img-right">
+                    <img src="assets/img/flip-cardbanner.png" alt="" srcset=""> 
+                </div>
+                <div class="w-50">
                     <h1 class="custom-text-banner">Lật Thẻ<span class="font-color-55D04A">,</span>
                         <br>May Rủi Hơn
                         <br>Cái Trên<span class="font-color-F24E1E">.</span>
@@ -185,7 +186,34 @@
                     <br>Flip Card còn bất ngờ hơn bạn nghĩ nhiều!
                     </p>
                 </div>
-                <img class="card-custom-img card-custom-img-right" src="assets/img/flip-cardbanner.png" alt="" srcset="">
+            </div>
+
+            <!-- Make for mobile -->
+            <div class="card-custom-mobile card-brown text-white d-xs-flex d-md-none">
+                <img class="" src="assets/img/tic-tac-toe_banner.png" alt="" srcset="" name="gameBanner">
+                <div class="card-infor-mobile hidden" name="gameInfo">
+                    <h1 class="custom-text-banner">Tic Tac Toe<span class="font-color-55D04A">,</span> Đội Lốt Ca-Rô<span class="font-color-F24E1E">.</span>
+                        <br>Nhất Thắng, Nhì Thua.
+                    </h1>
+                    <p class="font-size-smaller">Khi bạn chợt nhận ra, thắng thua không còn quan trọng nữa. Vì trò chơi này đơn giản đến mức đứa trẻ lớp một còn biết.
+                        <br> Tuy nhiên, hên xui may rủi. Cá chắc luôn? Thua thì phải uống cho hết nhé~
+                    </p>
+                </div>
+                <button class="card-infor-mobile__btn btn btn-light" name="gameButton">+</button>
+            </div>
+            
+            <div
+                class="card-custom-mobile card-blue flex-row justify-content-start align-items-center text-white mt-4 d-xs-flex d-md-none">
+                <img class="" src="assets/img/flip-cardbanner.png" alt="" srcset="" name="gameBanner">
+                <div class="card-infor-mobile hidden" name="gameInfo">
+                    <h1 class="custom-text-banner">Lật Thẻ<span class="font-color-55D04A">,</span> May Rủi Hơn
+                        <br>Cái Trên<span class="font-color-F24E1E">.</span> Cũng OK.
+                    </h1>
+                    <p class="font-size-smaller">May rủi theo đúng nghĩa đen. Dành cho hệ người chơi yêu thích sự mạo hiểm. Không thích hơn thua.
+                        <br>Flip Card còn bất ngờ hơn bạn nghĩ nhiều!
+                    </p>
+                </div>
+                <button class="card-infor-mobile__btn btn btn-dark" name="gameButton">+</button>
             </div>
         </section>
 

@@ -1,3 +1,16 @@
+@media screen and (min-height: 900px) {
+
+
+    .content-tab{
+        position: relative;
+        height: 65vh;
+    }
+
+    .content-tab__intro{
+        position: relative;
+    }
+}
+
 @media screen and (max-width: 873px) {
 
     section {
@@ -22,13 +35,12 @@
 
 }
 
+/* For card responsive */
+
 @media screen and (max-width: 1230px) {
     .intro-section{
         padding-right: 8vw;
         padding-left: 8vw;
-    }
-    .fullscreen-first-page {
-        height: 105vh;
     }
 
     .card-custom{
@@ -39,28 +51,29 @@
         border-radius: 1.4rem;
         padding: 5vh 5vh 1vh 5vh;
     }
-    .card-brown{
-        background: linear-gradient(to bottom, rgba(91, 4, 13, 0.88), rgba(91, 4, 13, 0.359));
+
+    .card-custom-img{
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
     }
 
-    .card-blue {
-        background: linear-gradient(to bottom, rgba(102, 154, 193, 1), rgba(205, 222, 235, 1));
-    }
-    .custom-text-banner{
-        font-weight: 700;
-        font-size: 4vh;
-    }
-    .card-custom-img {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 75%;
-    }
-    .card-custom-img-left {
+    .card-custom-img-left{
         left: -1rem;
     }
     .card-custom-img-right {
         right: -1rem;
+    }
+
+    .card-custom-img img{
+        height: 25vh;
+        width: fit-content;
+    }
+
+
+    .custom-text-banner{
+        font-weight: 700;
+        font-size: 4vh;
     }
 
     .font-size-smaller{
@@ -77,14 +90,7 @@
     }
 
     .content-tab__intro{
-        position: relative;
         height: fit-content;
-    }
-
-    .content-tab__intro img {
-        width: 90%;
-        height: auto;
-        object-fit: cover;
     }
 }
 
