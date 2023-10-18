@@ -26,14 +26,14 @@ window.addEventListener('scroll', (e) => {
         addClassX(txtSearch[0], "txt-search")
         removeClassX(txtSearch[1], "txt-search-dark")
         addClassX(txtSearch[1], "txt-search")
-        logoNav.src = "";
+        addClassX(logoNav, "hidden");
     } else if (window.scrollY > 100) {
         addClassX(menuBar, "bg-light-custom awake");
         removeClassX(txtSearch[0], "txt-search")
         removeClassX(txtSearch[1], "txt-search")
         addClassX(txtSearch[0], "txt-search-dark")
         addClassX(txtSearch[1], "txt-search-dark")
-        logoNav.src = "assets/img/logo-ben.svg";
+        removeClassX(logoNav, "hidden");
     }
 })
 
