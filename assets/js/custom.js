@@ -51,14 +51,14 @@ window.onload = () => {
         listGameInfo = $.getElementsByName("gameInfo");
 
         listGames[0] = {
-            isShown: false,
+            isShown: true,
             btnObj: listGameBtn[0],
             imgObj: listGameBanner[0],
             infoObj: listGameInfo[0]
         }
 
         listGames[1] = {
-            isShown: false,
+            isShown: true,
             btnObj: listGameBtn[1],
             imgObj: listGameBanner[1],
             infoObj: listGameInfo[1]
