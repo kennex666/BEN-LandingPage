@@ -1,4 +1,5 @@
 const $ = document;
+var isSentForm = false;
 
 const addClassX = (elementID, className) => {
     className.split(" ").forEach(element => {
@@ -24,15 +25,11 @@ window.addEventListener('scroll', (e) => {
         removeClassX(menuBar, "bg-light-custom");
         removeClassX(txtSearch[0], "txt-search-dark")
         addClassX(txtSearch[0], "txt-search")
-        removeClassX(txtSearch[1], "txt-search-dark")
-        addClassX(txtSearch[1], "txt-search")
         addClassX(logoNav, "hidden");
     } else if (window.scrollY > 100) {
         addClassX(menuBar, "bg-light-custom awake");
         removeClassX(txtSearch[0], "txt-search")
-        removeClassX(txtSearch[1], "txt-search")
         addClassX(txtSearch[0], "txt-search-dark")
-        addClassX(txtSearch[1], "txt-search-dark")
         removeClassX(logoNav, "hidden");
     }
 })
@@ -82,7 +79,6 @@ window.onload = () => {
             }
         }
         });
-        
 
         $.getElementById("btn-downloadApp").href = getMobileOperatingSystem();
     }
@@ -105,6 +101,27 @@ window.onload = () => {
                 btnLanguage.innerHTML = '🇺🇸 English';
             }
         }
+    } else {
+        
+        frmSubmitProblem = $.getElementById("frmSubmitProblem");
+
+        frmSubmitProblem.onsubmit = (e) => {
+            e.preventDefault();
+            if (isSentForm) {
+                removeClassX($.getElementById("msgSentFailed"), "d-none");
+
+                setTimeout(() => {
+                    addClassX($.getElementById("msgSentFailed"), "d-none");
+                }, 5000);
+            } else {
+                isSentForm = true;
+                removeClassX($.getElementById("msgSentSuccess"), "d-none");
+                setTimeout(() => {
+                    addClassX($.getElementById("msgSentSuccess"), "d-none");
+                }, 5000);
+            }
+        }
+        
     }
 }
 
