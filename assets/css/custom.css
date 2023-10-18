@@ -370,7 +370,12 @@ button.card-infor-mobile__btn{
 
 .custom-text-banner{
     font-weight: 600;
-    font-size: 7vh;
+    font-size: 6.7vh;
+}
+
+.custom-text-banner-mobile {
+    font-weight: 600;
+    font-size: x-large;
 }
 
 .card-custom-img{
@@ -409,7 +414,7 @@ button.card-infor-mobile__btn{
 }
 
 #txt-email{
-    width: 25vw;
+    width: 65%;
     border: 1px solid black;
 }
 
