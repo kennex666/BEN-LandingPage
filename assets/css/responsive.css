@@ -65,11 +65,6 @@
         right: -1rem;
     }
 
-    .card-custom-img img{
-        height: 25vh;
-        width: fit-content;
-    }
-
 
     .custom-text-banner{
         font-weight: 700;

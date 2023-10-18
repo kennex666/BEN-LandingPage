@@ -45,7 +45,7 @@ window.onload = () => {
     listGames = [];
 
 
-    if (window.location.pathname.indexOf('/index') !== -1) {
+    if ($.getElementsByName("gameButton").length > 0) {
         listGameBtn = $.getElementsByName("gameButton");
         listGameBanner = $.getElementsByName("gameBanner");
         listGameInfo = $.getElementsByName("gameInfo");
@@ -113,11 +113,11 @@ function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        alert("iOS detected - Download App for IOS");
+    if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
+        alert("App Store is available - Download Test for iOS");
         return "iOS";
     }
-        
-    alert("Android detected - Download App for IOS");
+    
+    alert("Google Play is available - Download Test for Android");
     return "Android";
 }
