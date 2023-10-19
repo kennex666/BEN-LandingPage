@@ -68,33 +68,37 @@ window.onload = () => {
         listGameInfo = $.getElementsByName("gameInfo");
 
         listGames[0] = {
-            isShown: true,
+            isShown: false,
             btnObj: listGameBtn[0],
             imgObj: listGameBanner[0],
             infoObj: listGameInfo[0]
         }
 
         listGames[1] = {
-            isShown: true,
+            isShown: false,
             btnObj: listGameBtn[1],
             imgObj: listGameBanner[1],
             infoObj: listGameInfo[1]
         }
 
         listGames.forEach(element => {
-           element.btnObj.onclick = () => {
-            if (element.isShown) {
-                element.isShown = false
-                removeClassX(element.infoObj, "hidden");
+            element.btnObj.onclick = (e) => {
+            if (element.isShown == false) {
+                element.isShown = true;
                 addClassX(element.infoObj, "wake-hidden");
                 addClassX(element.imgObj, "hidden");
+                addClassX(e.target.closest('button'), "btn-close-card")
+                removeClassX(e.target.closest('button'), "btn-open-card")
+                removeClassX(element.infoObj, "hidden");
                 removeClassX(element.imgObj, "wake-hidden");
 
             } else {
-                element.isShown = true;
+                element.isShown = false;
                 addClassX(element.infoObj, "hidden");
                 addClassX(element.imgObj, "wake-hidden");
                 removeClassX(element.imgObj, "hidden");
+                addClassX(e.target.closest('button'), "btn-open-card")
+                removeClassX(e.target.closest('button'), "btn-close-card")
                 removeClassX(element.infoObj, "wake-hidden");
             }
         }
@@ -151,10 +155,10 @@ function getMobileOperatingSystem() {
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
-        alert("App Store is available - Download Test for iOS");
+        //alert("App Store is available - Download Test for iOS");
         return "iOS";
     }
     
-    alert("Google Play is available - Download Test for Android");
+    //alert("Google Play is available - Download Test for Android");
     return "Android";
 }

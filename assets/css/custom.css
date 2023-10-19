@@ -339,17 +339,54 @@ section{
     width: 90vw;
 }
 
+.btn-close-card{
+    rotate: 45deg;
+    animation: close-card-btn-animation 0.5s;
+}
+
+.btn-open-card {
+    rotate: 0deg;
+    animation: open-card-btn-animation 0.5s;
+}
+
+@keyframes close-card-btn-animation {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 45deg;
+    }
+}
+
+@keyframes open-card-btn-animation {
+    from {
+        rotate: 45deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
 button.card-infor-mobile__btn{
+    padding: 0;
     position: absolute;
     bottom: 2vh;
     right: 2vh;
-    filter: opacity(50%);
-    font-size: 20px;
-    line-height: 0;
     width: 40px;
     height: 40px;
+    border: none;
+    background: none;
     border-radius: 50%;
+    z-index: 9;
 }
+
+button.card-infor-mobile__btn svg{
+    width: 40px;
+    height: 40px;
+}
+
+
 
 .hidden{
     filter: opacity(0%);
