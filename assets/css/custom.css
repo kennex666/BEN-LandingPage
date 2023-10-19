@@ -328,24 +328,28 @@ section{
     display: flex;
     position: relative;
     flex-direction: row;
-    border-radius: 1.4rem;
+    border-radius: 0.5rem;
 }
 
 .card-custom-mobile div{
-    margin: 5vh 5vh 1vh 5vh;
+    margin: 0px 2.1rem 0px 2rem;
 }
 
 .card-custom-mobile img{
     width: 90vw;
 }
 
-.btn-close-card{
+.btn-close-card {
     rotate: 45deg;
     animation: close-card-btn-animation 0.5s;
+    -webkit-animation: close-card-btn-animation 0.5s;
+    -o-animation: close-card-btn-animation 0.5s;
 }
 
 .btn-open-card {
     rotate: 0deg;
+    -webkit-animation: open-card-btn-animation 0.5s;
+    -o-animation: open-card-btn-animation 0.5s;
     animation: open-card-btn-animation 0.5s;
 }
 
@@ -390,16 +394,16 @@ button.card-infor-mobile__btn svg{
 
 .hidden{
     filter: opacity(0%);
-    -webkit-transition: .5s all ease-out;
-    -o-transition: .5s all ease-out;
-    transition: .5s all ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
 }
 
 .wake-hidden {
     filter: opacity(100%);
-    -webkit-transition: .5s all ease-in;
-    -o-transition: .5s all ease-in;
-    transition: .5s all ease-in;
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in;
 }
 
 .card-infor-mobile{

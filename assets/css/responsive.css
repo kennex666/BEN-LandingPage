@@ -120,3 +120,31 @@
     }
 
 }
+
+
+@media screen and (max-width: 483px) {
+    .custom-text-banner-mobile {
+        font-weight: 600;
+        font-size: large;
+    }
+
+    button.card-infor-mobile__btn{
+        padding: 0;
+        position: absolute;
+        bottom: 2vh;
+        right: 2vh;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: none;
+        border-radius: 50%;
+        z-index: 9;
+    }
+
+    button.card-infor-mobile__btn svg{
+        width: 30px;
+        height: 30px;
+    }
+
+
+}
