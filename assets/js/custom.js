@@ -133,16 +133,18 @@ window.onload = () => {
             e.preventDefault();
             if (isSentForm) {
                 removeClassX($.getElementById("msgSentFailed"), "d-none");
-
                 setTimeout(() => {
                     addClassX($.getElementById("msgSentFailed"), "d-none");
                 }, 5000);
             } else {
-                isSentForm = true;
-                removeClassX($.getElementById("msgSentSuccess"), "d-none");
-                setTimeout(() => {
-                    addClassX($.getElementById("msgSentSuccess"), "d-none");
-                }, 5000);
+				fetch("https://docs.google.com/forms/d/e/1FAIpQLSfx5j5wlGilpmB-EPICcywbv-_3_hEPJuIpj4Yg7lM1CBGEUg/formResponse", {method: "POST", body: new FormData(e.target), mode: "no-cors"}).finally(() => {
+					isSentForm = true;
+					removeClassX($.getElementById("msgSentSuccess"), "d-none");
+					setTimeout(() => {
+						addClassX($.getElementById("msgSentSuccess"), "d-none");
+					}, 10000);
+				})
+                
             }
         }
         

@@ -9,7 +9,7 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets//js/custom.js?version=2.22.9"></script>
+    <script src="assets//js/custom.js?version=2.23.1"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
     </style>
@@ -282,24 +282,24 @@
                     <h3 class="">Liên lạc với chúng tôi, thông qua <b>email.</b></h3>
                 </div>
                 
-                <form id="frmSubmitProblem" class="col-xs-12 col-md-6" action="/sendMessage" method="GET">
+                <form id="frmSubmitProblem" class="col-xs-12 col-md-6" action="/sendMessage" method="POST">
                     <div>
                         <label class="font-bold font-size-smaller" for="txt-email">Email</label>
-                        <input type="email" class="form-control font-size-smaller" id="txt-email" placeholder="Vui lòng nhập email" required>
+                        <input type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" class="form-control font-size-smaller" id="txt-email" name="entry.1439526342" placeholder="Vui lòng nhập email" required>
                     </div>
 
                     <div class="font-bolder font-size-smaller mt-2">
                         <div class="font-bold" for="radProblem">Vấn đề bạn gặp phải</div>
                         <div name="radErrorCode1">
-                            <input type="radio" id="radErrorCode1" name="radProblem" value="1" checked>
+                            <input type="radio" id="radErrorCode1" name="entry.1142995950" value="Lỗi khi sử dụng: Ví dụ như lỗi đăng nhập, giật lag,..." checked>
                             <label for="radErrorCode1">Lỗi khi sử dụng: Ví dụ như lỗi đăng nhập, giật lag,...</label>
                         </div>
                         <div name="radErrorCode2">
-                            <input type="radio" id="radErrorCode2" name="radProblem" value="2">
+                            <input type="radio" id="radErrorCode2" name="entry.1142995950" value="Lỗi thanh toán">
                             <label for="radErrorCode2">Lỗi thanh toán</label>
                         </div>
                         <div name="radErrorCode3">
-                            <input type="radio" id="radErrorCode3" name="radProblem" value="3">
+                            <input type="radio" id="radErrorCode3" name="entry.1142995950" value="Khác">
                             <label for="radErrorCode3">Khác</label>
                         </div>
                     </div>
